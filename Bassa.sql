@@ -39,6 +39,26 @@ CREATE TABLE IF NOT EXISTS `download` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
 
 --
+-- Table structure for table `user`
+--
+
+CREATE TABLE IF NOT EXISTS `user` (
+  `user_name` varchar(256) NOT NULL,
+  `added_time` bigint(20) NOT NULL,
+  `status` tinyint(4) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`user_name`),
+  UNIQUE KEY `user_name` (`user_name`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`user_name`, `added_time`, `status`) VALUES
+('rand', 1438363998, 3);
+
+
+--
 -- Dumping data for table `download`
 --
 
